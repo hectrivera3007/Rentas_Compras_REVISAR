@@ -7,9 +7,9 @@ namespace BL.Rentas
 {
     public class Contexto: DbContext
     {
-        public Contexto(): base(@"Server=DESKTOP-E30O3CK\SQLEXPRESS2014;Database=Rentas;Trusted_Connection=True;")
+        public Contexto(): base("Rentas")
         {
-            
+            //base(@"Server=DESKTOP-E30O3CK\SQLEXPRESS2014;Database=Rentas;Trusted_Connection=True;")
         }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -26,5 +26,6 @@ namespace BL.Rentas
         public DbSet<Tipo> Tipos { get; set; }
         public DbSet<Factura> Facturas { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
+        
     }
 }

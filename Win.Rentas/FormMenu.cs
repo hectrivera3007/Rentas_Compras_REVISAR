@@ -84,7 +84,9 @@ namespace Win.Rentas
         }
         private void reporteDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            var formReporteProductos = new ReportedeProductos();
+            formReporteProductos.MdiParent = this;
+            formReporteProductos.Show();
         }
     }
 }
